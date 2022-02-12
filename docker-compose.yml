@@ -1,7 +1,10 @@
 version: "3"
 services: 
   golang-demo:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: builder
     volumes: 
       - ./:/go/src
     tty: true
